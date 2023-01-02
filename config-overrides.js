@@ -6,7 +6,7 @@ module.exports = function override(config,env){
         output:{
             // filename:"static/js/rigel-widget.js",
             // chunkFilename: "static/js/rigel-widget.[name].js",
-            // path : "/Users/t/Documents/RIGEL PROTOCOL/p2p-widget/build",
+            path: path.resolve(__dirname, 'build'),
             // pathinfo : false,
             // // futureEmitAssets:true,
             // publicPath : "/",
