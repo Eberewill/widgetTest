@@ -5,7 +5,7 @@ import Button from "./components/button";
 
 
 const config: ThemeConfig = {
-  initialColorMode: "dark",
+  initialColorMode: "light",
   useSystemColorMode: false,
 };
 

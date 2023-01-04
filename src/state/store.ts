@@ -1,12 +1,13 @@
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 import { save, load } from "redux-localstorage-simple";
+import account from './application/account'
 
 
 const PERSISTED_KEYS: string[] = [];
 
 const store = configureStore({
   reducer: {
-
+    account
   },
   middleware: [
     ...getDefaultMiddleware({
