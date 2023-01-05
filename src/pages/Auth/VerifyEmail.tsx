@@ -46,7 +46,7 @@ const VerifyEmail = () => {
         <Box
           mx={4}
           mb={isMobileDevice ? 45 : 5}
-          w={["100%", "100%", "45%", "40.5%"]}
+          w={["100%", "100%", '508px', "508px"]}
         >
           <Box
             mt={5}
