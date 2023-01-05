@@ -9,9 +9,6 @@ export default function Buy() {
         borderRadius={"20px"}
         w='508px'
         h='600px'
-
-        // justifyContent={"center"}
-        // alignItems={"center"}
       >
         <BuySellHeader />
       </Flex>
