@@ -7,7 +7,7 @@ export default function Buy() {
       <Flex
         border={"1px solid #666666"}
         borderRadius={"20px"}
-        w='460px'
+        w='508px'
         h='600px'
 
         // justifyContent={"center"}
