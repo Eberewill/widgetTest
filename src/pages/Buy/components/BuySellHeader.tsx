@@ -19,13 +19,8 @@ const BuySellHeader = () => {
   const currencyTextColor = useColorModeValue("#666666", "");
   const activeCurrencyColor = useColorModeValue("#319EF6", "");
   return (
-    <Flex
-      px={3}
-      py={4}
-      w='100%'
-      //   border={"1px solid red"}
-    >
-      <Flex w='100%' justifyContent={"space-between"}>
+    <Flex px={3} py={4} w='100%' justifyContent={"center"}>
+      <Flex w='100%' justifyContent={"center"}>
         <Tabs>
           <TabList
             w='100%'
@@ -72,7 +67,7 @@ const BuySellHeader = () => {
             </Flex>
           </TabList>
           <TabPanels>
-            <TabPanel>
+            <TabPanel px={0}>
               <BuySection />
             </TabPanel>
             <TabPanel>

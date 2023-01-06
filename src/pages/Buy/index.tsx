@@ -8,7 +8,7 @@ export default function Buy() {
         border={"1px solid #666666"}
         borderRadius={"20px"}
         w='508px'
-        h='600px'
+        h='580px'
       >
         <BuySellHeader />
       </Flex>
