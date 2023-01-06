@@ -12,13 +12,9 @@ import { ChevronDownIcon } from "@chakra-ui/icons";
 
 import { AiOutlineExclamationCircle } from "react-icons/ai";
 import React, { useState } from "react";
-import NetworkIndicator from "./components/NetworkIndicator";
 import { useDispatch } from "react-redux";
 import { accountScreens, setActiveAccountScreen } from "../../state/application/account";
-import WidgetNav from "./components/WidgetNav";
-
 const CreateAccount = () => {
-  const [isMobileDevice] = useMediaQuery("(max-width: 750px)");
   const [countryCode, setCountryCode] = useState("+234");
   const [fullName, setFullName] = useState("");
   const [emailAddress, setemailAddress] = useState("");
@@ -33,39 +29,7 @@ const CreateAccount = () => {
 
   return (
     <>
-      <Flex minH="100vh" zIndex={1} mt={10} flexWrap="wrap">
-        <Box
-          display={isMobileDevice ? "none" : undefined}
-          mx={4}
-          w={["100%", "100%", "37%", "29.5%"]}
-          mb={4}
-        >
-          <Spacer />
-        </Box>
-        <Box
-          mx={4}
-          mb={isMobileDevice ? 45 : 5}
-          w={["100%", "100%", '508px', "508px"]}
-        >
-          <Box
-            mt={5}
-            p={7}
-            mb="10px"
-            backgroundColor={mode === "dark" ? "#213345" : "#FFFFFF"}
-            border={mode === "dark" ? "1px solid #324D68" : "1px solid #DEE6ED"}
-            borderRadius="12px"
-          >
-            <WidgetNav/>
-            
-            <Text
-              fontSize="20px"
-              fontWeight={500}
-              color={mode === "dark" ? "white" : "#333333"}
-              mt="24px"
-            >
-              Create an account
-            </Text>
-
+    
             <Text
               fontSize="16px"
               fontWeight={700}
@@ -232,10 +196,8 @@ const CreateAccount = () => {
             >
               Continue
             </Button>
-          </Box>
-        </Box>
-      </Flex>
-    </>
+            </>
+      
   );
 };
 
