@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {Box} from "@chakra-ui/react"
 import NoAccountModal from '../Auth/modals/NoAccountModal'
+import WalletConnectModal from '../../components/wallet/WalletConnectModal';
 
 export default function Home() {
 
@@ -9,7 +10,7 @@ export default function Home() {
 
   return (
     <>
-    <NoAccountModal openModal={showNoAccount}/>
+    <WalletConnectModal openModal={showNoAccount}/>
     <Box>Home</Box>
     </>
   )
