@@ -70,7 +70,7 @@ const BuySellHeader = () => {
             <TabPanel px={0}>
               <BuySection />
             </TabPanel>
-            <TabPanel>
+            <TabPanel px={0}>
               <SellSection />
             </TabPanel>
           </TabPanels>

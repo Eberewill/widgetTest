@@ -24,7 +24,7 @@ const SellSection = () => {
   const sellBgColor = useColorModeValue("#CC334F", "");
   const sellColor = useColorModeValue("#FFFFFF", "");
   return (
-    <Box>
+    <Box px={0}>
       <Flex pt={3} flexDirection={"column"}>
         <Text color={textColor} fontSize={"14px"} mb={2}>
           Payment Method
