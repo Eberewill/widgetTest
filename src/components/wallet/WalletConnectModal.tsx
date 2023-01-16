@@ -11,15 +11,17 @@ import {
     useColorModeValue,
     useDisclosure,
   } from "@chakra-ui/react";
-  import React, { useEffect } from "react";
+
+  import React, { useEffect, useState } from "react";
   import {  useLocation, useNavigate } from "react-router-dom";
-  import NoAccount from "../../../assets/images/noAccount.png";
+  import walletConnect from "../../assets/images/walletConnect.png";
+import ChooseNetwork from "./ChooseNetwork";
   
-  const NoAccountModal = ({
+  const WalletConnectModal = ({
     openModal,
   }: {
     openModal: boolean;
-  }) => {
+   }) => {
     const bgColour = useColorModeValue("#FFFFFF", "#15202B");
     const textColour = useColorModeValue("#333333", "#F1F5F8");
     const textColour2 = useColorModeValue("#666666", "#F1F5F8");
@@ -27,6 +29,8 @@ import {
     const navigate = useNavigate();
   
     const mode = useColorModeValue("light", "dark");
+    
+    const [showNetworkModal, setShowNetworkModal] = useState(false);
   
     useEffect(() => {
       onOpen()
@@ -34,6 +38,7 @@ import {
     
   
     return (
+      <>
       <Modal isOpen={isOpen} onClose={onClose} isCentered>
         <ModalOverlay />
         <ModalContent
@@ -41,11 +46,11 @@ import {
           color='#fff'
           borderRadius='6px'
           paddingBottom='15px'
-          width={386}
+          width={398}
         >
             <Flex my={5} >
               <ModalCloseButton
-              mt={4}
+              mt={5}
               mr={4}
               size='sm'
                color={textColour2}
@@ -61,50 +66,44 @@ import {
             flexDirection={"column"}
             alignItems={"center"}
           >
-            <Image src={NoAccount} py={3} />
-            <Text fontSize='20px' fontWeight='700' py={3} color={textColour}>
-            You don’t have an account
+            <Image src={walletConnect} mt='17px' />
+            <Text fontSize='16px' fontWeight='500' py={3} color={textColour}>
+            Connect wallet
             </Text>
   
             <Text
-              px={2}
+              px={4}
               pb={4}
               color={textColour2}
               fontSize='14px'
-              fontWeight={500}
+              fontWeight={400}
               align='center'
             >
-                You need a user account to be able to buy and sell cryptocurrencies. Click the button below to create an account in <span style={{color : "#319EF6"}}>less than 2 minutes.</span> 
+              You need to connect your wallet to be able to buy or sell on the platform. 
             </Text>
             <Button
               mt='24px'
               onClick={
                
                 () =>{ 
-                    navigate('/create-account')
+                  setShowNetworkModal(true)
                     onClose()
                 }
               }
               variant={"brand"}
               width='100%'
+              height='48px'
             >
-              Create an account
-            </Button>
-
-            <Button
-              mt='16px'
-              onClick={onClose}
-              variant='outline'
-              width='100%'
-              color={'#666666'}
-            >
-              Cancel
+             Connect wallet
             </Button>
           </ModalBody>
         </ModalContent>
       </Modal>
+      <ChooseNetwork openModal={showNetworkModal}/>
+    
+      </>
     );
   };
   
-  export default NoAccountModal;
+  export default WalletConnectModal;
   

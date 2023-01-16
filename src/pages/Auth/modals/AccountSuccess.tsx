@@ -54,7 +54,7 @@ import {
           color='#fff'
           borderRadius='6px'
           paddingBottom='15px'
-          width={448}
+          width={386}
         >
           <ModalBody
             my={2}
