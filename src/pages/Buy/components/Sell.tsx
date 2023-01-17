@@ -135,14 +135,21 @@ const SellSection = () => {
       </Flex>
       <Flex justifyContent={"space-between"} mt={10}>
         <Flex
+          cursor={"pointer"}
           borderRadius={"6px"}
           py={3}
-          px={16}
+          px={20}
           border={`1px solid ${resetColor}`}
         >
           <Text color={resetColor}>Reset</Text>
         </Flex>
-        <Flex borderRadius={"6px"} py={3} px={16} bgColor={sellBgColor}>
+        <Flex
+          cursor={"pointer"}
+          borderRadius={"6px"}
+          py={3}
+          px={20}
+          bgColor={sellBgColor}
+        >
           <Text color={sellColor}>Sell RGP</Text>
         </Flex>
       </Flex>

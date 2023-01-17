@@ -132,12 +132,19 @@ const BuySection = () => {
         <Flex
           borderRadius={"6px"}
           py={3}
-          px={16}
+          px={20}
           border={`1px solid ${resetColor}`}
+          cursor={"pointer"}
         >
           <Text color={resetColor}>Reset</Text>
         </Flex>
-        <Flex borderRadius={"6px"} py={3} px={16} bgColor={buyBgColor}>
+        <Flex
+          cursor={"pointer"}
+          borderRadius={"6px"}
+          py={3}
+          px={20}
+          bgColor={buyBgColor}
+        >
           <Text color={buyColor}>Buy RGP</Text>
         </Flex>
       </Flex>

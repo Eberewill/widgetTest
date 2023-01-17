@@ -19,33 +19,43 @@ const BuySellHeader = () => {
   const currencyTextColor = useColorModeValue("#666666", "");
   const activeCurrencyColor = useColorModeValue("#319EF6", "");
   return (
-    <Flex px={3} py={4} w='100%' justifyContent={"center"}>
-      <Flex w='100%' justifyContent={"center"}>
+    <Flex
+      px={4}
+      py={4}
+      // maxW='508px'
+      h='580px'
+      border={"1px solid black"}
+      // justifyContent={"center"}
+      borderRadius={"6px"}
+    >
+      <Flex justifyContent={"center"}>
         <Tabs>
           <TabList
-            w='100%'
+            w='508px'
             alignItems={"center"}
             justifyContent={"space-between"}
           >
-            <Tab
-              px={5}
-              borderRadius={"6px"}
-              border={`1px solid ${borderColor}`}
-              _selected={{ color: "white", bg: buyBgColor }}
-              fontWeight={"500"}
-            >
-              Buy
-            </Tab>
-            <Tab
-              fontWeight={"500"}
-              px={5}
-              borderRadius={"6px"}
-              ml={2}
-              border={`1px solid ${borderColor}`}
-              _selected={{ color: "white", bg: sellBgColor }}
-            >
-              Sell
-            </Tab>
+            <Flex>
+              <Tab
+                px={5}
+                borderRadius={"6px"}
+                border={`1px solid ${borderColor}`}
+                _selected={{ color: "white", bg: buyBgColor }}
+                fontWeight={"500"}
+              >
+                Buy
+              </Tab>
+              <Tab
+                fontWeight={"500"}
+                px={5}
+                borderRadius={"6px"}
+                ml={2}
+                border={`1px solid ${borderColor}`}
+                _selected={{ color: "white", bg: sellBgColor }}
+              >
+                Sell
+              </Tab>
+            </Flex>
 
             <Flex mt={4} alignItems={"center"} ml={10}>
               <Text
