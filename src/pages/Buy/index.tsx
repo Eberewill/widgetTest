@@ -1,9 +1,10 @@
-import React from 'react'
-import {Box} from "@chakra-ui/react"
-
+import { Box, Flex } from "@chakra-ui/react";
+import BuySellHeader from "./components/BuySellHeader";
 
 export default function Buy() {
   return (
-    <Box>Buy</Box>
-  )
+    <Flex py={5} minH={"100vh"} justifyContent={"center"}>
+      <BuySellHeader />
+    </Flex>
+  );
 }
